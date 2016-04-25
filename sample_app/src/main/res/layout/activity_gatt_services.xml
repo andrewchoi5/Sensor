@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/main_background">
+
+    <GridLayout
+        android:id="@+id/deviceInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+    </GridLayout>
+
+    <View
+        android:id="@+id/upperSepparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/deviceInformation"
+        android:background="@android:color/holo_blue_dark"/>
+
+    <GridLayout
+        android:id="@+id/gattInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="match_parent"
+            android:layout_height="500dip"
+            android:id="@+id/rssi"
+            app:seriesData="0=5;2=5;3=0;4=2"
+            app:seriesType="points"
+            android:visibility="gone"/>
+
+        <!--452-->
+
+        <!--<TextView-->
+            <!--style="@style/GridLayoutTitleTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Location:"/>-->
+
+        <!--<TextView-->
+            <!--style="@style/GridLayoutTitleTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="UUID: "/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/uuid"-->
+            <!--style="@style/GridLayoutDataTextViewMonospace"/>-->
+
+        <!--<TextView-->
+            <!--style="@style/GridLayoutTitleTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/label_desc"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/description"-->
+            <!--style="@style/GridLayoutDataTextViewMonospace"/>-->
+
+        <!--<TextView-->
+            <!--style="@style/GridLayoutTitleTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/label_as_string"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/data_as_string"-->
+            <!--style="@style/GridLayoutDataTextViewMonospace"/>-->
+
+        <!--<TextView-->
+            <!--style="@style/GridLayoutTitleTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/label_as_array"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/data_as_array"-->
+            <!--style="@style/GridLayoutDataTextViewMonospace"/>-->
+
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_address"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/device_address"
+            style="@style/GridLayoutDataTextView"
+            />
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_state"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/connection_state"
+            style="@style/GridLayoutDataTextView"
+            />
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RSSI: "
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/rssiValue"
+            style="@style/GridLayoutDataTextView"
+            />
+
+
+
+    </GridLayout>
+
+    <Button android:id="@+id/hideShowbtn"
+        android:text=""
+        android:onClick="myFancyMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        />
+
+    <View
+        android:id="@+id/lowerSepparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/gattInformation"
+        android:background="@android:color/holo_blue_dark"
+        android:visibility="gone"/>
+
+    <ExpandableListView
+        android:id="@+id/gatt_services_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/lowerSepparator"
+        android:layout_below="@id/upperSepparator"/>
+
+
+
+
+</RelativeLayout>

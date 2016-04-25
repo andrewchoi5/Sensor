@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/andrewchoi5/Desktop/Bluetooth-LE-Library---Android/sample_app/build/intermediates/exploded-aar/Bluetooth-LE-Library---Android/GraphView/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5bb7153a6f97447f333311abc662a11eb53c4aa2">
+        <dex dex="/Users/andrewchoi5/Desktop/Bluetooth-LE-Library---Android/sample_app/build/intermediates/pre-dexed/debug/classes-f868d5d51a004e66311741d1f1e94c20a62f93d5.jar" />
+    </item>
+
+</items>

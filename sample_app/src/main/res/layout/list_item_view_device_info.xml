@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="top"
+              android:orientation="vertical"
+              android:paddingBottom="5dp"
+              android:weightSum="1"
+    android:background="@drawable/main_background">
+
+
+    <!--<com.jjoe64.graphview.GraphView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="300dip"-->
+        <!--android:id="@+id/graphSecond"-->
+        <!--android:layout_weight="22.20"-->
+        <!--app:seriesData="0=5;2=5;3=0;4=2"-->
+        <!--app:seriesType="points"-->
+        <!--app:seriesColor="#ee0000"/>-->
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        android:background="@drawable/main_background">
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_name"/>
+
+        <TextView
+            android:id="@+id/deviceName"
+            style="@style/GridLayoutDataTextView"/>
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner Name:"/>
+        <TextView
+            android:id="@+id/ownerName"
+            style="@style/GridLayoutDataTextView"/>
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collaborator Name:"/>
+        <TextView
+            android:id="@+id/collaboratorName"
+            style="@style/GridLayoutDataTextView"/>
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Corporation Name"/>
+        <TextView
+            android:id="@+id/corporationName"
+            style="@style/GridLayoutDataTextView"/>
+
+
+
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_address"/>
+
+        <TextView
+            android:id="@+id/deviceAddress"
+            style="@style/GridLayoutDataTextView"/>
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_class"/>
+
+        <TextView
+            android:id="@+id/deviceClass"
+            style="@style/GridLayoutDataTextView"/>
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_major_class"/>
+
+        <TextView
+            android:id="@+id/deviceMajorClass"
+            style="@style/GridLayoutDataTextView"/>
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_device_services"/>
+
+        <TextView
+            android:id="@+id/deviceServiceList"
+            style="@style/GridLayoutDataTextView"/>
+
+        <TextView
+            style="@style/GridLayoutTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_bonding_state"/>
+
+        <TextView
+            android:id="@+id/deviceBondingState"
+            style="@style/GridLayoutDataTextView"/>
+    </GridLayout>
+
+</LinearLayout>
